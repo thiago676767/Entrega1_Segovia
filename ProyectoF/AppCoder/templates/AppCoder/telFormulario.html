@@ -7,10 +7,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/telFormulario/" method="POST">
+    
+    {% if miFormulario.errors %}
 
-        <p>Marca: <input type="text" name="marca"></p>
-        <p>Modelo: <input type="text" name="modelo"></p>
+    <p style="color:red;"> Estan mal los datos, reviselos porfavor</p>
+
+    {% endif %}
+
+    <form action="/telFormulario/" method="POST">{% csrf_token %}
+
+        <table>
+
+            {{ miFormulario.as_table }}
+
+        </table>
+        
+        <input type="submit", value="Enviar">
 
 
 
@@ -20,3 +32,6 @@
 
 </body>
 </html>
+
+<!-- <p>Marca: <input type="text" name="marca"></p>
+        <p>Modelo: <input type="text" name="modelo"></p> -->

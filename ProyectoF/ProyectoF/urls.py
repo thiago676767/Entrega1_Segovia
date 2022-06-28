@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from AppCoder.views import TelvTemplate
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('teleform/', TelvTemplate)
 ]
+
+#C:/Users/User/Desktop/coder/django/ProyectoFinal/ProyectoF/AppCoder/templates/AppCoder/telFormulario.html
