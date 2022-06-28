@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppCoder.views import TelvTemplate
+from AppCoder.views import TelvTemplate, TelefTemplate, AuriTemplate
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('teleform/', TelvTemplate)
+    path('teleform/', TelvTemplate),
+    path('telefonoform/', TelefTemplate),
+    path('auriform/', AuriTemplate)
 ]
 
 #C:/Users/User/Desktop/coder/django/ProyectoFinal/ProyectoF/AppCoder/templates/AppCoder/telFormulario.html

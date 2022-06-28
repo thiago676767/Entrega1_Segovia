@@ -9,7 +9,7 @@ class Telefono(models.Model):
         ('S', "Smartphone"),
         ('C', "Cable"),
     )
-    tipo = models.PositiveSmallIntegerField("Tipo", choices=Tipos)
+    
     color = models.CharField("Color", max_length= 20)
     precio = models.FloatField("Precio $")
 
